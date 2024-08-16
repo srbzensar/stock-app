@@ -12,9 +12,7 @@ bat 'mvn clean'
 stage('Compile stage') {
 steps {
 dir("StockApp") {
-withMaven(maven: 'maven_3_6_1') {
 bat 'mvn compile'
-}
 }
 }
 }
@@ -22,9 +20,7 @@ bat 'mvn compile'
 stage('Install stage') {
 steps {
 dir("StockApp") {
-withMaven(maven: 'maven_3_6_1') {
 bat 'mvn install'
-}
 }
 }
 }
