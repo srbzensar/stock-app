@@ -1,13 +1,13 @@
 pipeline {
 agent any
 environment {
-    JAVA_HOME="C:/Program Files/Java/jdk-21"
+    JAVA_HOME="C:/Program Files/Java/jdk-17"
   }
 stages {
 stage('Clean stage') {
 steps {
 dir("StockApp") {
-bat 'C:/Users/ps110022/Downloads/apache-maven-3.9.9-bin/apache-maven-3.9.9/bin/mvn clean'
+bat 'mvn clean'
 }
 }
 }
@@ -15,7 +15,7 @@ bat 'C:/Users/ps110022/Downloads/apache-maven-3.9.9-bin/apache-maven-3.9.9/bin/m
 stage('Compile stage') {
 steps {
 dir("StockApp") {
-bat 'C:/Users/ps110022/Downloads/apache-maven-3.9.9-bin/apache-maven-3.9.9/bin/mvn compile'
+bat 'mvn compile'
 }
 }
 }
@@ -23,7 +23,7 @@ bat 'C:/Users/ps110022/Downloads/apache-maven-3.9.9-bin/apache-maven-3.9.9/bin/m
 stage('Install stage') {
 steps {
 dir("StockApp") {
-bat 'C:/Users/ps110022/Downloads/apache-maven-3.9.9-bin/apache-maven-3.9.9/bin/mvn install'
+bat 'mvn install'
 }
 }
 }
